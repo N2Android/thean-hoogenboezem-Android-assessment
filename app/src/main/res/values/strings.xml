@@ -10,4 +10,5 @@
 
     <!--About-->
     <string name="about_screen_title">About</string>
+    <string name="engineer_profile_picture_content_description">Engineer Profile Picture</string>
 </resources>

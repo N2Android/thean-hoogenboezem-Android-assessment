@@ -15,7 +15,7 @@ For the next **72 hours** you will have free reign to finish off what Steve star
 - Below you will find a list of main tasks, with their detail further below.
 
 ### Main tasks
-- [ ] There are a total of **3 known** bugs, ranging from simple to complex. Fix the bugs.
+- [x] There are a total of **3 known** bugs, ranging from simple to complex. Fix the bugs.
 - [ ] Create and display a reusable component, which could be used for the profile view.
 - [ ] Finish implementing the mechanism to order the list of engineers and add tests.
 
@@ -27,6 +27,7 @@ For reference to the original design check out the ***original_design.png*** fil
 - [x] Bug 1: On the about screen, there seems to be a layout issue with the question.
 - [x] Bug 2: The preselected answer is not visible. 
 - [x] Bug 3: When changing the answer to a question no selection is visible.
+# TODO - should changing the answer persist for the question view?
 
 ## Profile View
 For designs check out the ***profile_view_designs*** folder in ***assets***.
