@@ -31,10 +31,10 @@ For reference to the original design check out the ***original_design.png*** fil
 
 ## Profile View
 For designs check out the ***profile_view_designs*** folder in ***assets***.
-- [ ] Choose which version of the profile view design you would like to attempt.
-- [ ] Create a generic, reusable version of your chosen design.
-- [ ] Display your view at the top of the About screen.
-- [ ] Tapping on the image in your view should allow a user to select a new image to display from their gallery.
+- [x] Choose which version of the profile view design you would like to attempt.
+- [x] Create a generic, reusable version of your chosen design.
+- [x] Display your view at the top of the About screen.
+- [x] Tapping on the image in your view should allow a user to select a new image to display from their gallery.
 - [ ] If a user updates their profile image, their image on the list of Engineers screen should also update.
 
 ## Ordering the list of Engineers
