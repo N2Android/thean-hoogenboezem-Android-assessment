@@ -14,8 +14,7 @@ class ProfileCardView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : CardView(context, attrs) {
     private val binding: ViewEngineerProfileCardBinding =
-        ViewEngineerProfileCardBinding.inflate(LayoutInflater.from(context),
-            this)
+        ViewEngineerProfileCardBinding.inflate(LayoutInflater.from(context), this)
 
     private val profilePicture: ImageView = binding.profileImage
     private val name: TextView = binding.name

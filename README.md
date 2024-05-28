@@ -16,7 +16,7 @@ For the next **72 hours** you will have free reign to finish off what Steve star
 
 ### Main tasks
 - [x] There are a total of **3 known** bugs, ranging from simple to complex. Fix the bugs.
-- [ ] Create and display a reusable component, which could be used for the profile view.
+- [x] Create and display a reusable component, which could be used for the profile view.
 - [ ] Finish implementing the mechanism to order the list of engineers and add tests.
 
 > You can complete these tasks in any order you like, but starting with one or two bugs might be a good way to get into the codebase.
@@ -26,8 +26,8 @@ For the next **72 hours** you will have free reign to finish off what Steve star
 For reference to the original design check out the ***original_design.png*** file in the ***assets*** folder. 
 - [x] Bug 1: On the about screen, there seems to be a layout issue with the question.
 - [x] Bug 2: The preselected answer is not visible. 
-- [x] Bug 3: When changing the answer to a question no selection is visible.
-# TODO - should changing the answer persist for the question view?
+- [x] Bug 3: When changing the answer to a question no selection is visible. 
+# TODO [ ] Changing the answer does not persist for the question view
 
 ## Profile View
 For designs check out the ***profile_view_designs*** folder in ***assets***.
@@ -35,7 +35,8 @@ For designs check out the ***profile_view_designs*** folder in ***assets***.
 - [x] Create a generic, reusable version of your chosen design.
 - [x] Display your view at the top of the About screen.
 - [x] Tapping on the image in your view should allow a user to select a new image to display from their gallery.
-- [ ] If a user updates their profile image, their image on the list of Engineers screen should also update.
+- [x] If a user updates their profile image, their image on the list of Engineers screen should also update.
+# TODO [ ] List of Engineers list item does not updated well and should be part of reused list item
 
 ## Ordering the list of Engineers
 There are no designs for this task.

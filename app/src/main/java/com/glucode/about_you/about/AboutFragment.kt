@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import com.glucode.about_you.about.views.ProfileCardView
 import com.glucode.about_you.about.views.ProfilePictureInterface
@@ -41,6 +42,9 @@ class AboutFragment: Fragment(), ProfilePictureInterface {
     private fun setUpProfileCard(engineerName: String) {
         engineerProfileView = ProfileCardView(requireContext())
         engineerProfileView.setupProfilePictureClickListener(this)
+        if (engineer.defaultImageName != "") {
+            engineerProfileView.setProfilePicture(engineer.defaultImageName.toUri())
+        }
         engineerProfileView.addName(engineerName)
         engineerProfileView.addRole(engineer.role)
         binding.container.addView(engineerProfileView)
@@ -65,13 +69,11 @@ class AboutFragment: Fragment(), ProfilePictureInterface {
         }
         when (requestCode) {
             REQUEST_CODE_GALLERY_IMAGE -> {
-                Log.d("Test", "Data Returned")
                 if (data != null) {
-                    Log.d("Test", "Data Not null")
                     val selectedImageUri = data.data
                     if (selectedImageUri != null) {
-                        Log.d("Test", "SelectedImage URI Returned")
                         engineerProfileView.setProfilePicture(selectedImageUri)
+                        engineer.defaultImageName = selectedImageUri.toString()
                     }
                 }
             }
