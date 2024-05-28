@@ -40,7 +40,7 @@ For designs check out the ***profile_view_designs*** folder in ***assets***.
 
 ## Ordering the list of Engineers
 There are no designs for this task.
-- [ ] Order the list of engineers accending based on the number of years, coffees or bugs.
+- [x] Order the list of engineers accending based on the number of years, coffees or bugs.
 - [ ] Add tests
 
 
