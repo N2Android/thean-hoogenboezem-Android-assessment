@@ -5,5 +5,5 @@ data class Engineer(
     val role: String,
     var defaultImageName: String,
     val quickStats: QuickStats,
-    val questions: List<Question>,
+    var questions: List<Question>,
 )

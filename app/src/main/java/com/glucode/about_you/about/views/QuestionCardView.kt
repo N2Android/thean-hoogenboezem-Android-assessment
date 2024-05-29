@@ -13,15 +13,16 @@ import com.glucode.about_you.databinding.ViewQuestionCardBinding
 class QuestionCardView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0
+    defStyleAttr: Int = 0,
+    private val questionView: QuestionView
 ) : CardView(context, attrs, defStyleAttr) {
     private val binding: ViewQuestionCardBinding =
         ViewQuestionCardBinding.inflate(LayoutInflater.from(context), this)
 
-    var title: String? = null
+    var questionTitle: String? = null
         set(value) {
             field = value
-            binding.title.text = value
+            binding.questionTitle.text = value
         }
 
     var answers: List<String> = listOf()
@@ -46,10 +47,13 @@ class QuestionCardView @JvmOverloads constructor(
         setCardBackgroundColor(ContextCompat.getColor(context, R.color.black))
     }
 
-    private fun addAnswer(title: String) {
+    private fun addAnswer(answerText: String) {
         val answerView = AnswerCardView(context)
-        answerView.title = title
-        answerView.setOnClickListener { onAnswerClick(it) }
+        answerView.answerTitle = answerText
+        answerView.setOnClickListener {
+            onAnswerClick(it)
+            questionView.questionAnswerChanged(questionTitle.toString(), answerText)
+        }
         binding.answers.addView(answerView)
     }
 

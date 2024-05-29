@@ -1,6 +1,6 @@
 package com.glucode.about_you.engineers.models
 
 data class Answer(
-    val text: String?,
-    val index : Int?
+    var text: String?,
+    var index : Int?
 )

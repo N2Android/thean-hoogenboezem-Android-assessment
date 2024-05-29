@@ -4,7 +4,6 @@ import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,14 +12,16 @@ import androidx.fragment.app.Fragment
 import com.glucode.about_you.about.view.AboutView
 import com.glucode.about_you.about.view.model.AboutViewModel
 import com.glucode.about_you.about.views.ProfileCardView
-import com.glucode.about_you.about.views.ProfilePictureInterface
+import com.glucode.about_you.about.views.ProfilePictureView
 import com.glucode.about_you.about.views.QuestionCardView
+import com.glucode.about_you.about.views.QuestionView
 import com.glucode.about_you.databinding.FragmentAboutBinding
 import com.glucode.about_you.engineers.models.Engineer
 import com.glucode.about_you.engineers.models.Question
 import com.glucode.about_you.mockdata.MockData
 
-class AboutFragment: Fragment(), ProfilePictureInterface, AboutView {
+class AboutFragment: Fragment(),
+    ProfilePictureView, AboutView, QuestionView {
     private lateinit var binding: FragmentAboutBinding
     private lateinit var engineerProfileView: ProfileCardView
     private lateinit var viewModel: AboutViewModel
@@ -39,13 +40,13 @@ class AboutFragment: Fragment(), ProfilePictureInterface, AboutView {
         super.onViewCreated(view, savedInstanceState)
         val engineerName = arguments?.getString("name")
         val engineer = MockData.engineers.first { it.name == engineerName }
+        engineerProfileView = ProfileCardView(requireContext())
         viewModel = AboutViewModel(engineer, this)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode != RESULT_OK) {
-            Log.d("Test", "No Photo")
             return
         }
         when (requestCode) {
@@ -67,7 +68,6 @@ class AboutFragment: Fragment(), ProfilePictureInterface, AboutView {
     }
 
     override fun setupProfileCard(engineer: Engineer) {
-        engineerProfileView = ProfileCardView(requireContext())
         engineerProfileView.setupProfilePictureClickListener(this)
         if (engineer.defaultImageName != "") {
             engineerProfileView.setProfilePicture(engineer.defaultImageName.toUri())
@@ -79,8 +79,8 @@ class AboutFragment: Fragment(), ProfilePictureInterface, AboutView {
 
     override fun setupQuestions(questions: List<Question>) {
         questions.forEach { question ->
-            val questionView = QuestionCardView(requireContext())
-            questionView.title = question.questionText
+            val questionView = QuestionCardView(requireContext(), null, 0, this)
+            questionView.questionTitle = question.questionText
             questionView.answers = question.answerOptions
             questionView.selection = question.answer.index
 
@@ -90,5 +90,9 @@ class AboutFragment: Fragment(), ProfilePictureInterface, AboutView {
 
     override fun updateProfilePicture(uri: Uri) {
         engineerProfileView.setProfilePicture(uri)
+    }
+
+    override fun questionAnswerChanged(question: String, questionAnswer: String) {
+        viewModel.onAnswerChanged(question, questionAnswer)
     }
 }

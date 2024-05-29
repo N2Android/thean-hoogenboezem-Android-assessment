@@ -23,10 +23,10 @@ class AnswerCardView @JvmOverloads constructor(
     @ColorInt
     private val deselectedTextColor: Int
 
-    var title: String? = null
+    var answerTitle: String? = null
         set(value) {
             field = value
-            binding.title.text = value
+            binding.answerTitle.text = value
         }
 
     init {
@@ -44,10 +44,10 @@ class AnswerCardView @JvmOverloads constructor(
         super.setSelected(selected)
         if (selected) {
             setCardBackgroundColor(selectedCardBackgroundColor)
-            binding.title.setTextColor(selectedTextColor)
+            binding.answerTitle.setTextColor(selectedTextColor)
         } else {
             setCardBackgroundColor(null)
-            binding.title.setTextColor(deselectedTextColor)
+            binding.answerTitle.setTextColor(deselectedTextColor)
         }
     }
 }

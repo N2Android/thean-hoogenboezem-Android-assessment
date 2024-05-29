@@ -25,8 +25,8 @@ class ProfileCardView @JvmOverloads constructor(
         elevation = resources.getDimension(R.dimen.elevation_normal)
     }
 
-    fun setupProfilePictureClickListener(galleryInterface: ProfilePictureInterface){
-        profilePicture.setOnClickListener { galleryInterface.selectPhoto() }
+    fun setupProfilePictureClickListener(view: ProfilePictureView){
+        profilePicture.setOnClickListener { view.selectPhoto() }
     }
 
     fun setProfilePicture(uri: Uri){

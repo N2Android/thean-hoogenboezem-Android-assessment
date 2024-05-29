@@ -27,7 +27,7 @@ For reference to the original design check out the ***original_design.png*** fil
 - [x] Bug 1: On the about screen, there seems to be a layout issue with the question.
 - [x] Bug 2: The preselected answer is not visible. 
 - [x] Bug 3: When changing the answer to a question no selection is visible. 
-# TODO [ ] Changing the answer does not persist for the question view
+# TODO [x] Changing the answer does not persist for the question view
 
 ## Profile View
 For designs check out the ***profile_view_designs*** folder in ***assets***.
