@@ -20,13 +20,13 @@ class EngineersViewModel(private val engineers: MutableList<Engineer>,
     fun engineerListSortAscendingBy(sortBy: Int) {
         when (sortBy){
             sortByYears -> {
-                engineers.sortWith(compareBy { it.quickStats.years })
+                engineers.sortWith(compareBy { it.getQuickStats().years })
             }
             sortByCoffees -> {
-                engineers.sortWith(compareBy { it.quickStats.coffees })
+                engineers.sortWith(compareBy { it.getQuickStats().coffees })
             }
             sortByBugs -> {
-                engineers.sortWith(compareBy { it.quickStats.bugs })
+                engineers.sortWith(compareBy { it.getQuickStats().bugs })
             }
         }
         engineersView.updateRecyclerViewList(engineers)

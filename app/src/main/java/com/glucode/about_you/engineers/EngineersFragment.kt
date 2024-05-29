@@ -74,7 +74,7 @@ class EngineersFragment : Fragment(), EngineersView {
 
     override fun navigateToAboutEngineer(engineer: Engineer) {
         val bundle = Bundle().apply {
-            putString("name", engineer.name)
+            putString("name", engineer.getName())
         }
         findNavController().navigate(R.id.action_engineersFragment_to_aboutFragment, bundle)
     }

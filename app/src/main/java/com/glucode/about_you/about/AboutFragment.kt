@@ -39,7 +39,7 @@ class AboutFragment: Fragment(),
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val engineerName = arguments?.getString("name")
-        val engineer = MockData.engineers.first { it.name == engineerName }
+        val engineer = MockData.engineers.first { it.getName() == engineerName }
         engineerProfileView = ProfileCardView(requireContext())
         viewModel = AboutViewModel(engineer, this)
     }
@@ -69,11 +69,11 @@ class AboutFragment: Fragment(),
 
     override fun setupProfileCard(engineer: Engineer) {
         engineerProfileView.setupProfilePictureClickListener(this)
-        if (engineer.defaultImageName != "") {
-            engineerProfileView.setProfilePicture(engineer.defaultImageName.toUri())
+        if (engineer.getDefaultImage() != "") {
+            engineerProfileView.setProfilePicture(engineer.getDefaultImage().toUri())
         }
-        engineerProfileView.addName(engineer.name)
-        engineerProfileView.addRole(engineer.role)
+        engineerProfileView.addName(engineer.getName())
+        engineerProfileView.addRole(engineer.getRole())
         binding.container.addView(engineerProfileView)
     }
 

@@ -25,14 +25,14 @@ class EngineersRecyclerViewAdapter(
     inner class EngineerViewHolder(private val binding: ItemEngineerBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(engineer: Engineer, onClick: (Engineer) -> Unit) {
-            binding.name.text = engineer.name
-            binding.role.text = engineer.role
+            binding.name.text = engineer.getName()
+            binding.role.text = engineer.getRole()
             binding.root.setOnClickListener {
                 onClick(engineer)
             }
 
-            if (engineer.defaultImageName != "") {
-                binding.profileImage.setImageURI(engineer.defaultImageName.toUri())
+            if (engineer.getDefaultImage() != "") {
+                binding.profileImage.setImageURI(engineer.getDefaultImage().toUri())
             }
         }
     }

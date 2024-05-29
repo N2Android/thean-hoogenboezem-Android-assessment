@@ -9,16 +9,16 @@ class AboutViewModel(private val engineer: Engineer,
                      private val view: AboutView) : ViewModel() {
     init {
         view.setupProfileCard(engineer)
-        view.setupQuestions(engineer.questions)
+        view.setupQuestions(engineer.getQuestions())
     }
 
     fun onPhotoResult(uri: Uri) {
         view.updateProfilePicture(uri)
-        engineer.defaultImageName = uri.toString()
+        engineer.updateDefaultImage(uri.toString())
     }
 
     fun onAnswerChanged(questionText: String, answer: String) {
-        val questionToUpdate = engineer.questions.find { it.questionText == questionText }
+        val questionToUpdate = engineer.getQuestions().find { it.questionText == questionText }
         val index = questionToUpdate?.answerOptions?.indexOf(answer)
 
         if (questionToUpdate != null) {
