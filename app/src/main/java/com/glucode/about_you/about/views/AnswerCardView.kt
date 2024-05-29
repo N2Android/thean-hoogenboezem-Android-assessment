@@ -23,16 +23,16 @@ class AnswerCardView @JvmOverloads constructor(
     @ColorInt
     private val deselectedTextColor: Int
 
-    var title: String? = null
+    var answerTitle: String? = null
         set(value) {
             field = value
-            binding.title.text = value
+            binding.answerTitle.text = value
         }
 
     init {
         val whiteColour = ContextCompat.getColor(context, R.color.white)
         val blackColour = ContextCompat.getColor(context, R.color.black)
-        selectedCardBackgroundColor = blackColour
+        selectedCardBackgroundColor = whiteColour
         selectedTextColor = blackColour
         deselectedTextColor = whiteColour
         radius = resources.getDimension(R.dimen.corner_radius_normal)
@@ -44,10 +44,10 @@ class AnswerCardView @JvmOverloads constructor(
         super.setSelected(selected)
         if (selected) {
             setCardBackgroundColor(selectedCardBackgroundColor)
-            binding.title.setTextColor(selectedTextColor)
+            binding.answerTitle.setTextColor(selectedTextColor)
         } else {
             setCardBackgroundColor(null)
-            binding.title.setTextColor(deselectedTextColor)
+            binding.answerTitle.setTextColor(deselectedTextColor)
         }
     }
 }
