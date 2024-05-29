@@ -19,6 +19,9 @@ class ProfileCardView @JvmOverloads constructor(
     private val profilePicture: ImageView = binding.profileWrapper.findViewById(R.id.profile_image)
     private val name: TextView = binding.profileWrapper.findViewById(R.id.name)
     private val role: TextView = binding.profileWrapper.findViewById(R.id.role)
+    private val statsYears: TextView = binding.profileWrapper.findViewById(R.id.stat_years_number)
+    private val statsCoffees: TextView = binding.profileWrapper.findViewById(R.id.stat_coffees_number)
+    private val statsBugs: TextView = binding.profileWrapper.findViewById(R.id.stat_bugs_number)
 
     init {
         radius = resources.getDimension(R.dimen.corner_radius_normal)
@@ -42,5 +45,17 @@ class ProfileCardView @JvmOverloads constructor(
 
     fun addRole(engineerRole: String){
         role.text = engineerRole
+    }
+
+    fun addYears(years: String) {
+        statsYears.text = years
+    }
+
+    fun addCoffees(coffees: String) {
+        statsCoffees.text = coffees
+    }
+
+    fun addBugs(bugs: String) {
+        statsBugs.text = bugs
     }
 }

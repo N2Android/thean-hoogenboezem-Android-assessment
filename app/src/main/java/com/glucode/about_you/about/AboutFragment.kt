@@ -74,6 +74,9 @@ class AboutFragment: Fragment(),
         }
         engineerProfileView.addName(engineer.getName())
         engineerProfileView.addRole(engineer.getRole())
+        engineerProfileView.addYears(engineer.getQuickStats().years.toString())
+        engineerProfileView.addCoffees(engineer.getQuickStats().coffees.toString())
+        engineerProfileView.addBugs(engineer.getQuickStats().bugs.toString())
         binding.container.addView(engineerProfileView)
     }
 
