@@ -27,7 +27,7 @@ For reference to the original design check out the ***original_design.png*** fil
 - [x] Bug 1: On the about screen, there seems to be a layout issue with the question.
 - [x] Bug 2: The preselected answer is not visible. 
 - [x] Bug 3: When changing the answer to a question no selection is visible. 
-# TODO [x] Changing the answer does not persist for the question view
+- [x] Bug Changing the answer does not persist for the question view
 
 ## Profile View
 For designs check out the ***profile_view_designs*** folder in ***assets***.
@@ -36,12 +36,22 @@ For designs check out the ***profile_view_designs*** folder in ***assets***.
 - [x] Display your view at the top of the About screen.
 - [x] Tapping on the image in your view should allow a user to select a new image to display from their gallery.
 - [x] If a user updates their profile image, their image on the list of Engineers screen should also update.
-# TODO [ ] List of Engineers list item does not updated well and should be part of reused list item
+# TODO [ ] Bug - List of Engineers list item does not updated well and should be part of reused list item
 
 ## Ordering the list of Engineers
 There are no designs for this task.
-- [x] Order the list of engineers accending based on the number of years, coffees or bugs.
+- [x] Order the list of engineers ascending based on the number of years, coffees or bugs.
 - [ ] Add tests
+- [ ] Testing needs more accuracy for cases - additional mocking information needed
+
+## Additional Improvements and Refactors for Future
+Here are some of my proposals on how to improve the app further
+- [ ] Refactor - Update the app support for API 34 - allowing use of latest Android Features
+- [ ] Refactor - At API 34 - Intent based Image Picker can be updated to use the new PhotoPicker
+- [ ] Refactor - Introduce Jetpack Compose - redesign views with compose to improve testability
+- [ ] Refactor - Move all logic implementations to viewModel architecture to improve testability
+- [ ] Feature - Introduce Firebase to manage dataset from MockData - TODO - create cloud storage integration
+
 
 
 

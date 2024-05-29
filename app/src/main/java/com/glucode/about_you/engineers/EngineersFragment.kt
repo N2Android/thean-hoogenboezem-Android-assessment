@@ -40,26 +40,35 @@ class EngineersFragment : Fragment(), EngineersView {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
             R.id.action_years -> {
-                viewModel.engineerListSortSelectedBy(true, viewModel.sortByYears)
+                viewModel.engineerListSortAscendingBy(viewModel.sortByYears)
                 return true
             }
             R.id.action_coffees -> {
-                viewModel.engineerListSortSelectedBy(true, viewModel.sortByCoffees)
+                viewModel.engineerListSortAscendingBy(viewModel.sortByCoffees)
                 return true
             }
             R.id.action_bugs -> {
-                viewModel.engineerListSortSelectedBy(true, viewModel.sortByBugs)
+                viewModel.engineerListSortAscendingBy(viewModel.sortByBugs)
                 return true
             }
         }
         return super.onOptionsItemSelected(item)
     }
 
+    override fun setupRecyclerViewList(engineersList: List<Engineer>) {
+        updateRecyclerView(engineersList)
+    }
+
     override fun updateRecyclerViewList(engineersList: List<Engineer>) {
+        updateRecyclerView(engineersList)
+    }
+
+    private fun updateRecyclerView(engineersList: List<Engineer>) {
         binding.list.adapter = EngineersRecyclerViewAdapter(engineersList) {
             viewModel.listItemClicked(it)
         }
-        val dividerItemDecoration = DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
+        val dividerItemDecoration =
+            DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
         binding.list.addItemDecoration(dividerItemDecoration)
     }
 

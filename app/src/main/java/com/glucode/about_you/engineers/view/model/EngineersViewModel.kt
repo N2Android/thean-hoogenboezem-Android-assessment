@@ -14,31 +14,19 @@ class EngineersViewModel(private val engineers: MutableList<Engineer>,
     val sortByBugs: Int = 3
 
     init {
-        engineersView.updateRecyclerViewList(engineers)
+        engineersView.setupRecyclerViewList(engineers)
     }
 
-    fun engineerListSortSelectedBy(ascending: Boolean, sortBy: Int) {
+    fun engineerListSortAscendingBy(sortBy: Int) {
         when (sortBy){
             sortByYears -> {
-                if (ascending) {
-                    engineers.sortWith(compareBy { it.quickStats.years })
-                } else {
-                    engineers.sortWith(compareByDescending { it.quickStats.years})
-                }
+                engineers.sortWith(compareBy { it.quickStats.years })
             }
             sortByCoffees -> {
-                if (ascending) {
-                    engineers.sortWith(compareBy { it.quickStats.coffees })
-                } else {
-                    engineers.sortWith(compareByDescending { it.quickStats.coffees})
-                }
+                engineers.sortWith(compareBy { it.quickStats.coffees })
             }
             sortByBugs -> {
-                if (ascending) {
-                    engineers.sortWith(compareBy { it.quickStats.bugs })
-                } else {
-                    engineers.sortWith(compareByDescending { it.quickStats.bugs})
-                }
+                engineers.sortWith(compareBy { it.quickStats.bugs })
             }
         }
         engineersView.updateRecyclerViewList(engineers)
