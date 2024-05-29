@@ -17,7 +17,7 @@ For the next **72 hours** you will have free reign to finish off what Steve star
 ### Main tasks
 - [x] There are a total of **3 known** bugs, ranging from simple to complex. Fix the bugs.
 - [x] Create and display a reusable component, which could be used for the profile view.
-- [ ] Finish implementing the mechanism to order the list of engineers and add tests.
+- [x] Finish implementing the mechanism to order the list of engineers and add tests.
 
 > You can complete these tasks in any order you like, but starting with one or two bugs might be a good way to get into the codebase.
 
@@ -27,30 +27,31 @@ For reference to the original design check out the ***original_design.png*** fil
 - [x] Bug 1: On the about screen, there seems to be a layout issue with the question.
 - [x] Bug 2: The preselected answer is not visible. 
 - [x] Bug 3: When changing the answer to a question no selection is visible. 
-- [x] Bug Changing the answer does not persist for the question view
+- [x] Extra Bugfix: Changing the answer does not persist for the question view
 
 ## Profile View
 For designs check out the ***profile_view_designs*** folder in ***assets***.
-- [x] Choose which version of the profile view design you would like to attempt.
+- [x] Choose which version of the profile view design you would like to attempt. - Starting with Simple
 - [x] Create a generic, reusable version of your chosen design.
 - [x] Display your view at the top of the About screen.
 - [x] Tapping on the image in your view should allow a user to select a new image to display from their gallery.
 - [x] If a user updates their profile image, their image on the list of Engineers screen should also update.
-# TODO [ ] Bug - List of Engineers list item does not updated well and should be part of reused list item
+- [x] Extra Bugfix: List of Engineers list item does not update due to tinting
+- [x] Extra: Updated to the Standard Design layout with the QuickStats - reused by the Engineer List
 
 ## Ordering the list of Engineers
 There are no designs for this task.
 - [x] Order the list of engineers ascending based on the number of years, coffees or bugs.
-- [ ] Add tests
-- [ ] Testing needs more accuracy for cases - additional mocking information needed
+- [x] Add tests
+- [ ] Testing Bug: Testing needs more accuracy for filtering and ordering - additional assertions needed
 
 ## Additional Improvements and Refactors for Future
 Here are some of my proposals on how to improve the app further
 - [ ] Refactor - Update the app support for API 34 - allowing use of latest Android Features
-- [ ] Refactor - At API 34 - Intent based Image Picker can be updated to use the new PhotoPicker
+- [ ] Refactor - With API 34 - Intent based Image Picker can be updated to use the new PhotoPicker
 - [ ] Refactor - Introduce Jetpack Compose - redesign views with compose to improve testability
-- [ ] Refactor - Move all logic implementations to viewModel architecture to improve testability
-- [ ] Feature - Introduce Firebase to manage dataset from MockData - TODO - create cloud storage integration
+- [ ] Refactor - Move all logic implementations to MVVM architecture to improve testability
+- [ ] Feature - Introduce Firebase to manage the dataset in MockData.kt - create cloud storage integration
 
 
 

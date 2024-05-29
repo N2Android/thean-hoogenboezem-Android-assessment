@@ -27,6 +27,9 @@ class EngineersRecyclerViewAdapter(
         fun bind(engineer: Engineer, onClick: (Engineer) -> Unit) {
             binding.engineeringItemWrapper.name.text = engineer.getName()
             binding.engineeringItemWrapper.role.text = engineer.getRole()
+            binding.engineeringItemWrapper.statYearsNumber.text = engineer.getQuickStats().years.toString()
+            binding.engineeringItemWrapper.statCoffeesNumber.text = engineer.getQuickStats().coffees.toString()
+            binding.engineeringItemWrapper.statBugsNumber.text = engineer.getQuickStats().bugs.toString()
             binding.root.setOnClickListener {
                 onClick(engineer)
             }
