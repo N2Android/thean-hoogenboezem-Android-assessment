@@ -36,7 +36,10 @@
     <dimen name="elevation_large">6dp</dimen>
 
     <!--profile-->
-    <dimen name="profile_height">50dp</dimen>
-    <dimen name="profile_width">50dp</dimen>
-    <dimen name="profile_sub_heading_text_size">14sp</dimen>
+    <dimen name="profile_height">100dp</dimen>
+    <dimen name="profile_width">100dp</dimen>
+    <dimen name="profile_role_text_size">14sp</dimen>
+    <dimen name="profile_name_text_size">16sp</dimen>
+    <dimen name="engineer_stats_height">44dp</dimen>
+    <dimen name="engineer_stats_heading_text_size">11sp</dimen>
 </resources>
