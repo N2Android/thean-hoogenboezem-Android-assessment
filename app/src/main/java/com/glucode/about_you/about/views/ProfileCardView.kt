@@ -23,6 +23,9 @@ class ProfileCardView @JvmOverloads constructor(
     init {
         radius = resources.getDimension(R.dimen.corner_radius_normal)
         elevation = resources.getDimension(R.dimen.elevation_normal)
+        setBackgroundColor(context.getColor(R.color.black))
+        name.setTextColor(context.getColor(R.color.white))
+        role.setTextColor(context.getColor(R.color.white))
     }
 
     fun setupProfilePictureClickListener(view: ProfilePictureView){

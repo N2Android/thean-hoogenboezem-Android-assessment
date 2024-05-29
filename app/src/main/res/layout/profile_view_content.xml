@@ -4,15 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/black">
+    android:layout_height="wrap_content">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profile_image"
             android:layout_width="@dimen/profile_height"
             android:layout_height="@dimen/profile_width"
             android:layout_margin="@dimen/margin_normal"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/ic_person"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -23,7 +22,7 @@
 
         <TextView
             android:id="@+id/name"
-            style="@style/Material.Body1.Medium.Light"
+            style="@style/Material.Body1.Medium"
             android:layout_width="@dimen/none"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"
@@ -37,7 +36,7 @@
 
         <TextView
             android:id="@+id/role"
-            style="@style/Material.Body2.Light"
+            style="@style/Material.Body2"
             android:layout_width="@dimen/none"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"
