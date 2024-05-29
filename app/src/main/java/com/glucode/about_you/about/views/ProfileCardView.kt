@@ -16,9 +16,9 @@ class ProfileCardView @JvmOverloads constructor(
     private val binding: ViewEngineerProfileCardBinding =
         ViewEngineerProfileCardBinding.inflate(LayoutInflater.from(context), this)
 
-    private val profilePicture: ImageView = binding.profileImage
-    private val name: TextView = binding.name
-    private val role: TextView = binding.role
+    private val profilePicture: ImageView = binding.profileWrapper.findViewById(R.id.profile_image)
+    private val name: TextView = binding.profileWrapper.findViewById(R.id.name)
+    private val role: TextView = binding.profileWrapper.findViewById(R.id.role)
 
     init {
         radius = resources.getDimension(R.dimen.corner_radius_normal)

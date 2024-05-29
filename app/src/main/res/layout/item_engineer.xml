@@ -11,11 +11,10 @@
         android:layout_width="@dimen/profile_height"
         android:layout_height="@dimen/profile_width"
         android:layout_margin="@dimen/margin_normal"
-        android:src="@drawable/ic_person"
+        android:src="@mipmap/ic_launcher"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/black"
         tools:ignore="ContentDescription" />
 
     <TextView

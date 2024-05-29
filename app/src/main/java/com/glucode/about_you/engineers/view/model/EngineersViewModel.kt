@@ -35,5 +35,4 @@ class EngineersViewModel(private val engineers: MutableList<Engineer>,
     fun listItemClicked(engineer: Engineer) {
         engineersView.navigateToAboutEngineer(engineer)
     }
-
 }

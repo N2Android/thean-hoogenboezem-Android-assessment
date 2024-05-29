@@ -1,57 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/black">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/profile_image"
-        android:layout_width="@dimen/profile_height"
-        android:layout_height="@dimen/profile_width"
-        android:layout_margin="@dimen/margin_normal"
-        android:src="@mipmap/ic_launcher"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/RoundedCornerImage"
-        android:scaleType="centerCrop"
-        android:background="@color/white"
-        tools:ignore="ContentDescription" />
+        <include layout="@layout/profile_view_content"/>
 
-    <TextView
-        android:id="@+id/name"
-        style="@style/Material.Body1.Medium.Light"
-        android:layout_width="@dimen/none"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:layout_marginEnd="@dimen/margin_normal"
-        app:layout_constraintBottom_toTopOf="@id/role"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/profile_image"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:text="Developer name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/role"
-        style="@style/Material.Body2.Light"
-        android:layout_width="@dimen/none"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:layout_marginEnd="@dimen/margin_normal"
-        android:layout_marginBottom="@dimen/margin_normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/profile_image"
-        app:layout_constraintTop_toBottomOf="@id/name"
-        android:textSize="@dimen/profile_sub_heading_text_size"
-        tools:text="Developer role" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
 </merge>
