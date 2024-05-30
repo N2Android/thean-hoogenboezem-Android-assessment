@@ -1,5 +1,5 @@
 package com.glucode.about_you.about.views
 
 interface ProfilePictureView {
-    fun selectPhoto()
+    fun profileClicked()
 }

@@ -82,4 +82,31 @@ class AboutViewModelTest {
 
         assert(engineer.getQuestions()[0].answer.index!!.equals(index))
     }
+
+    @Test
+    fun verify_view_model_permission_granted_open_gallery(){
+        aboutViewModel = AboutViewModel(engineer, view)
+
+        aboutViewModel.onPermissionGranted()
+
+        verify(view).openGallery()
+    }
+
+    @Test
+    fun verify_on_profile_image_clicked_request_permission() {
+        aboutViewModel = AboutViewModel(engineer, view)
+
+        aboutViewModel.onProfileImageClicked()
+
+        verify(view).requestPermission()
+    }
+
+    @Test
+    fun verify_permissionDenied_request_to_update_permission_settings(){
+        aboutViewModel = AboutViewModel(engineer, view)
+
+        aboutViewModel.onPermissionDenied()
+
+        verify(view).requestUserToUpdatePermissionSetting()
+    }
 }

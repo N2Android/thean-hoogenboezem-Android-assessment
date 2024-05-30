@@ -38,8 +38,9 @@ For designs check out the ***profile_view_designs*** folder in ***assets***.
 - [x] If a user updates their profile image, their image on the list of Engineers screen should also update.
 - [x] Extra Bugfix: List of Engineers list item does not update due to tinting
 - [x] Extra: Updated to the Standard Design layout with the QuickStats - reused by the Engineer List
+- 
 
-## Ordering the list of Engineers
+## Ordering[ ] Request for permission to access storage and images - handle permission responses the list of Engineers
 There are no designs for this task.
 - [x] Order the list of engineers ascending based on the number of years, coffees or bugs.
 - [x] Add tests

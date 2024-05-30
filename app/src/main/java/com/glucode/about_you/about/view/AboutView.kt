@@ -8,4 +8,7 @@ interface AboutView {
     fun setupProfileCard(engineer: Engineer)
     fun setupQuestions(questions: List<Question>)
     fun updateProfilePicture(uri: Uri)
+    fun requestPermission()
+    fun openGallery()
+    fun requestUserToUpdatePermissionSetting()
 }

@@ -26,4 +26,16 @@ class AboutViewModel(private val engineer: Engineer,
             questionToUpdate.answer.index = index
         }
     }
+
+    fun onPermissionGranted() {
+        view.openGallery()
+    }
+
+    fun onProfileImageClicked() {
+        view.requestPermission()
+    }
+
+    fun onPermissionDenied() {
+        view.requestUserToUpdatePermissionSetting()
+    }
 }

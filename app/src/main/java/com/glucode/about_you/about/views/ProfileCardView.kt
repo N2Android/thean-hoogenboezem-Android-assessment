@@ -32,7 +32,7 @@ class ProfileCardView @JvmOverloads constructor(
     }
 
     fun setupProfilePictureClickListener(view: ProfilePictureView){
-        profilePicture.setOnClickListener { view.selectPhoto() }
+        profilePicture.setOnClickListener { view.profileClicked() }
     }
 
     fun setProfilePicture(uri: Uri){
