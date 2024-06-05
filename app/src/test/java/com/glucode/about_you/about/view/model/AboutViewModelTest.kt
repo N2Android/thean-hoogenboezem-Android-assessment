@@ -55,7 +55,7 @@ class AboutViewModelTest {
 
         aboutViewModel.onPhotoResult(uri)
 
-        assert(engineer.getDefaultImage().equals(uri.toString()))
+        assert(engineer.getDefaultImage() == uri.toString())
     }
 
     @Test
@@ -63,7 +63,7 @@ class AboutViewModelTest {
         aboutViewModel = AboutViewModel(engineer, view)
 
         val changedQuestion = engineer.getQuestions()[0]
-        val changedAnswer = engineer.getQuestions()[0].answerOptions.get(2)
+        val changedAnswer = engineer.getQuestions()[0].answerOptions[2]
 
         aboutViewModel.onAnswerChanged(changedQuestion.questionText, changedAnswer)
 
@@ -75,12 +75,12 @@ class AboutViewModelTest {
         aboutViewModel = AboutViewModel(engineer, view)
 
         val changedQuestion = engineer.getQuestions()[0]
-        val changedAnswer = engineer.getQuestions()[0].answerOptions.get(2)
+        val changedAnswer = engineer.getQuestions()[0].answerOptions[2]
         val index = engineer.getQuestions()[0].answerOptions.indexOf(changedAnswer)
 
         aboutViewModel.onAnswerChanged(changedQuestion.questionText, changedAnswer)
 
-        assert(engineer.getQuestions()[0].answer.index!!.equals(index))
+        assert(engineer.getQuestions()[0].answer.index!! == index)
     }
 
     @Test

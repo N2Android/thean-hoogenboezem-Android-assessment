@@ -16,7 +16,7 @@
     <string name="engineer_stats_header_bugs">Bugs</string>
     <string name="permission_required_settings_prompt">Permission Required</string>
     <string name="permission_required_settings_prompt_message">This app needs storage access to load images. Please enable it in the app settings.</string>
-    <string name="go_to_settings_postitive_button_text">Go to Settings</string>
+    <string name="go_to_settings_positive_button_text">Go to Settings</string>
     <string name="cancel_button_settings_prompt">Cancel</string>
     <string name="permission_denied_toast_message">Permission Denied</string>
     <string name="engineer_name_key">name</string>

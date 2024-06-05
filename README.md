@@ -53,7 +53,3 @@ Here are some of my proposals on how to improve the app further
 - [ ] Refactor - Introduce Jetpack Compose - redesign views with compose to improve testability
 - [ ] Refactor - Move all logic implementations to MVVM architecture to improve testability
 - [ ] Feature - Introduce Firebase to manage the dataset in MockData.kt - create cloud storage integration
-
-
-
-

@@ -146,7 +146,7 @@ class AboutFragment: Fragment(),
         AlertDialog.Builder(requireContext())
             .setTitle(getString(R.string.permission_required_settings_prompt))
             .setMessage(getString(R.string.permission_required_settings_prompt_message))
-            .setPositiveButton(getString(R.string.go_to_settings_postitive_button_text)) { _, _ ->
+            .setPositiveButton(getString(R.string.go_to_settings_positive_button_text)) { _, _ ->
                 val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
                 val uri = Uri.fromParts("package", requireContext().packageName, null)
                 intent.data = uri
